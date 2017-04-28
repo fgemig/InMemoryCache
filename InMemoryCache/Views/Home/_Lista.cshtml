@@ -1,0 +1,28 @@
+﻿@model IEnumerable<InMemoryCache.Models.Livro>
+
+<h2>Lista de Livros Cadastrados:</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Titulo</th>
+            <th>Autor</th>
+            <th>Ano</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @{
+            foreach (var livro in Model)
+            {
+                <tr>
+                    <td>@livro.Id</td>
+                    <td>@livro.Titulo</td>
+                    <td>@livro.Autor</td>
+                    <td>@livro.AnoPublicacao</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
